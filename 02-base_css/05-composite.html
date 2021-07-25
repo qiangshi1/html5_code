@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器</title>
+    <style>
+        ol li {
+            color: red;
+        }
+        ul span {
+            color: green;
+        }
+        .case1 > span {
+            color: pink;
+        }
+        .case2  span {
+            color: pink;
+        }
+        .case3, .case4 {
+            color: red;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        a:active {
+            color: orange;
+            text-decoration: none;
+        }
+        input:focus {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>我在ol中</li>
+        <li>我在ol中</li>
+        <li>我在ol中</li>
+        <li>我在ol中</li>
+        <li>我在ol中</li>
+    </ol>
+    <ul>
+        <li>我在ul中</li>
+        <li>我在ul中</li>
+        <li>我在ul中</li>
+        <li>我在ul中</li>
+        <li>我在ul<span>中</span></li>
+    </ul>
+    <div class="case1">
+        <span>儿子</span>
+        <div>
+            <span>孙子</span>
+        </div>
+    </div>
+    <div class="case2">
+        <span>儿子</span>
+        <div>
+            <span>孙子</span>
+        </div>
+    </div>
+    <div class="case3">
+        case3
+    </div>
+    <div class="case4">
+        case4
+    </div>
+    <a href="#">我是1</a>
+    <a href="#">我是2</a>
+    <a href="#">我是3</a>
+    <a href="#">我是4</a>
+    <a href="#">我是5</a>
+    <a href="#">我是6</a>
+    <a href="#">我是7</a>
+    <a href="#">我是8</a>
+    <input type="text">
+</body>
+</html>

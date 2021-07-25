@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类选择器</title>
+    <style>
+        /* ul中的第一个li */
+        ul li:first-child {
+            color: red;
+        }
+        /* ul中的最后一个li */
+        ul li:last-child {
+            color: green;
+        }
+        /* ul中的第3个li */
+        ul li:nth-child(3) {
+            color: skyblue;
+        }
+        /* ul中的偶数li(第一个li是1) */
+        ul li:nth-child(even) {
+            background-color: pink;
+        }
+        /* ul中的奇数li(第一个li是1) */
+        ul li:nth-child(odd) {
+            background-color: chartreuse;
+        }
+        /* ul中的所有li */
+        ul li:nth-child(n) {
+            border: 1px solid maroon;
+        }
+        /* ul中的所有li */
+        ul li:nth-child(3n) {
+            list-style: none;
+        }
+        /* ul中的第5个li到最后 */
+        ul li:nth-child(n+5) {
+            padding-left: 50px;
+        }
+        /* ul中的前3个li */
+        ul li:nth-child(-n+3) {
+            padding-left: 150px;
+        }
+
+        div span:first-child {
+            color: red;
+        }
+        div span:last-child {
+            color: green;
+        }
+        div p:first-of-type {
+            border: 1px solid blue;
+        }
+        div span:last-of-type {
+            border: 1px solid cadetblue;
+        }
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li>我是第1个孩子</li>
+        <li>我是第2个孩子</li>
+        <li>我是第3个孩子</li>
+        <li>我是第4个孩子</li>
+        <li>我是第5个孩子</li>
+        <li>我是第6个孩子</li>
+        <li>我是第7个孩子</li>
+        <li>我是第8个孩子</li>
+    </ul>
+    <div>
+        <p>我是p</p>
+        <span>我是span</span>
+    </div>
+</body>
+</html>

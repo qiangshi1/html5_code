@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>translate rotate scale</title>
+    <style>
+        * {
+            background-color: #9b9b9b;
+        }
+        /* 定义关键帧 */
+        @keyframes move {
+            /* 开始状态 */
+            0% {
+                transform: translateX(0px);
+            }
+            /* 结束状态 */
+            100% {
+                transform: translateX(500px);
+            }
+        }
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 执行 */
+            animation: move;
+            /* 执行时间 */
+            animation-duration: 1s;
+        }
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: sienna;
+            /* 执行 */
+            animation-name: move;
+            /* 执行时间 */
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-delay: 1s;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+        .box2:hover {
+            animation-play-state: paused;
+        }
+        .box3 {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            /* background-color: red; */
+            /* 取消margin复用 */
+            overflow:hidden;
+        }
+        .dotted {
+            width: 8px;
+            height: 8px;
+            background-color: #09f;
+            border-radius: 50%;
+            /* margin: auto; */
+            margin-left: 46px;
+            margin-top: 46px;
+        }
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+            70% {
+                width: 40px;
+                height: 40px;
+                opacity: 0.5;
+            }
+            100% {
+                width: 70px;
+                height: 70px;
+                opacity: 0;
+            }
+        }
+        .box3 div[class^="pulse"] {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            left: 50px;
+            top: 50px;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            /* background-color: black; */
+            box-shadow: 0 0 12px #009dfd;
+            animation: pulse 1.2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        .box3 div.pulse2 {
+            animation-delay: 0.6s;
+        }
+        .box3 div.pulse3 {
+            animation-delay: 1.2s;
+        }
+        @keyframes for_box4 {
+            from {
+
+            }
+            to {
+                width: 100px;
+            }
+        }
+        .box4 {
+            width: 20px;
+            height: 20px;
+            background-color: bisque;
+            animation: for_box4 1s steps(5);
+            animation-iteration-count: infinite;
+        }
+        @keyframes moving_bear {
+            from {}
+            to {
+                background-position: -1600px;
+            }
+        }
+        @keyframes running_bear {
+            from {
+                left: 0px;
+            }
+            to {
+                left: 50%;
+            }
+        }
+        .box5 {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            background: url(images/a_running_bear.png) no-repeat;
+            animation: moving_bear 0.5s steps(8) infinite, running_bear 5s linear;
+            animation-fill-mode: forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3">
+        <div class="dotted"></div>
+        <div class="pulse1"></div>
+        <div class="pulse2"></div>
+        <div class="pulse3"></div>
+    </div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+</body>
+</html>

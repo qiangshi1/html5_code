@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片和文字对齐</title>
+</head>
+<body>
+    <img src="images/ldh.jpg" alt="">
+    <span>我和刘德华基线对齐</span>
+    <div></div>
+    <img style="vertical-align: middle;" src="images/ldh.jpg" alt="">
+    <span>我和刘德华中线对齐</span>
+    <div></div>
+    <div style="border: 2px solid red;">
+        <img src="images/ldh.jpg" alt="">
+        img和div的底部存在缝隙
+    </div>
+    <div style="border: 2px solid red;">
+        <img style="vertical-align: middle;" src="images/ldh.jpg" alt="">
+        给img设置style="vertical-align: middle;"可以取消缝隙
+    </div>
+</body>
+</html>

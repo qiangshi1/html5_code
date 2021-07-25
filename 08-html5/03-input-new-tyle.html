@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input新增</title>
+    <style>
+        input::placeholder {
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <p>表单一</p>
+    <form action="demo.php" method="POST" name="name1">
+        type="email": <input type="email"> <br />
+        type="url": <input type="url"> <br />
+        type="date": <input type="date"> <br />
+        type="time": <input type="time"> <br />
+        type="month": <input type="month"> <br />
+        type="week": <input type="week"> <br />
+        type="number": <input type="number"> <br />
+        type="tel": <input type="tel"> <br />
+        type="time": <input type="time"> <br />
+        type="search": <input type="search"> <br />
+        type="color": <input type="color"> <br />
+        type="submit": <input type="submit"> <br />
+    </form>
+    <p>表单二</p>
+    <form action="demo.php" method="POST" name="name2">
+        type="search": <input type="search" required="required" placeholder="占位符" autofocus="autofocus" autocomplete="on"> <br />
+        type="file": <input type="file" multiple="multiple"> <br />
+        type="submit": <input type="submit"> <br />
+    </form>
+    
+</body>
+</html>

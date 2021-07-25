@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css3过渡</title>
+    <style>
+        .box1 {
+            width: 250px;
+            height: 200px;
+            background-color: aquamarine;
+            /* transition: width .5s ease 0.2s,  height .5s ease 0.2s; */
+            transition: all .5s ease 0.2s;
+        }
+        .box1:hover {
+            width: 400px;
+            height: 350px;
+            background-color: blue;
+        }
+        .bar {
+            width: 250px;
+            height: 10px;
+            border: 1px solid red;
+            border-radius: 5px;
+        }
+        .bar-in {
+            width: 50%;
+            height: 100%;
+            border-radius: 5px;
+            background-color: red;
+            transition: all .5s ease 0.1s;
+        }
+        .bar-in:hover {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="bar">
+        <div class="bar-in">
+        </div>
+    </div>
+    
+</body>
+</html>

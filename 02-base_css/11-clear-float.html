@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .block {
+            height: 50px;
+        }
+        .block2 {
+            height: 350px;
+        }
+        .father1 {
+            height: 350px;
+            background-color: rgb(83, 82, 82);
+        }
+        .father1 .box1 {
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            float: left;
+        }
+        .father1 .box2 {
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+            float: left;
+        }
+        .father1 .box3 {
+            height: 300px;
+            width: 300px;
+            background-color: green;
+            float: left;
+        }
+
+        .father2 {
+            background-color: rgb(83, 82, 82);
+        }
+        .father2 .box1 {
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            float: left;
+        }
+        .father2 .box2 {
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+            float: left;
+        }
+        .father2 .box3 {
+            height: 300px;
+            width: 300px;
+            background-color: green;
+            float: left;
+        }
+
+        .father3 {
+            background-color: rgb(83, 82, 82);
+        }
+        .father3 .box1 {
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            float: left;
+        }
+        .father3 .box2 {
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+            float: left;
+        }
+        .father3 .box3 {
+            height: 300px;
+            width: 300px;
+            background-color: green;
+            float: left;
+        }
+        .father3 .blank {
+            clear: both;
+        }
+
+        .father4 {
+            background-color: rgb(83, 82, 82);
+            overflow: hidden;
+        }
+        .father4 .box1 {
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            float: left;
+        }
+        .father4 .box2 {
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+            float: left;
+        }
+        .father4 .box3 {
+            height: 300px;
+            width: 300px;
+            background-color: green;
+            float: left;
+        }
+
+        .clearfix:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+        /* IE6 7专属 */
+        .clearfix {
+            *zoom: 1;
+        }
+        .father5 {
+            background-color: rgb(83, 82, 82);
+        }
+        .father5 .box1 {
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            float: left;
+        }
+        .father5 .box2 {
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+            float: left;
+        }
+        .father5 .box3 {
+            height: 300px;
+            width: 300px;
+            background-color: green;
+            float: left;
+        }
+
+        .clearfix2:before, .clearfix2:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+        /* IE6 7专属 */
+        .clearfix2 {
+            *zoom: 1;
+        }
+        .father6 {
+            background-color: rgb(83, 82, 82);
+        }
+        .father6 .box1 {
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            float: left;
+        }
+        .father6 .box2 {
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+            float: left;
+        }
+        .father6 .box3 {
+            height: 300px;
+            width: 300px;
+            background-color: green;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="father1">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
+    <div class="block">父盒子给高度</div>
+
+    <div class="father2">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
+    <div class="block">父盒子没给高度, 异常</div>
+    <div class="block2"></div>
+
+    <div class="father3">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="blank"></div>
+    </div>
+    <div class="block">方法一: 额外标签法解决</div>
+
+    <div class="father4">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
+    <div class="block">方法二: 父元素添加overflow</div>
+
+    <div class="father5 clearfix">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
+    <div class="block">方法三: after伪元素</div>
+
+    <div class="father6 clearfix2">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
+    <div class="block">方法四: 双伪元素</div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见布局技巧</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        ul:before, ul:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+        ul li {
+            width: 150px;
+            height: 100px;
+            border: 1px solid black;
+            float: left;
+            margin-left: -1px;
+            list-style: none;  
+            /* z-index: 0; */
+        }
+        .box1 {
+            width: 700px;
+            /* height: 187px; */
+        }
+        .box1:before, .box1:after {
+            visibility: hidden;
+            display: block;
+            font-size: 0;
+            content: " ";
+            clear: both;
+            height: 0;
+        }
+        .box1 img {
+            float: left;
+        }
+        .box2 {
+            background-color: skyblue;
+            text-align: center;
+        }
+        .box2 a{
+            display: inline-block;
+            width: 36px;
+            height: 36px; 
+            border: 1px solid #ccc;
+            background-color: #f7f7f7;
+            text-align: center;
+            line-height: 36px;
+            color: black;
+            text-decoration: none;
+        }
+        .box3 {
+            width: 0;
+            height: 0;
+            border-top: 100px solid transparent;
+            border-right: 50px solid aqua;
+            border-bottom: 0 solid darkkhaki;
+            border-left: 0 solid crimson;
+        }
+        /* .box4同.box3, 只是写法不一样 */
+        .box4 {
+            width: 0;
+            height: 0;
+            border-color: transparent aqua darkkhaki crimson; 
+            border-style: solid;
+            border-width: 100px 50px 0 0;
+        }
+        .box5 {
+            text-align: center;
+            width: 250px;
+            height: 50px;
+            /* background-color: pink; */
+        }
+        .box5 .s1 {
+            display: inline-block;
+            height: 50px;
+            width: 100px;
+            background-color: #f1f1f1;
+            text-align: center;
+            line-height: 50px;
+            /* letter-spacing: 0px; */
+            margin-right: -6px;
+        }
+        .box5 .triangle {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-color: #f1f1f1 rgb(180, 30, 24) transparent transparent; 
+            border-style: solid;
+            border-width: 50px 20px 0 0;
+            vertical-align: top;
+            margin-right: -6px;
+            /* margin: -8px; */
+        }
+        .box5 .s2 {
+            display: inline-block;
+            height: 50px;
+            width: 100px;
+            background-color: rgb(180, 30, 24);
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            /* margin: 0px; */
+        }
+    </style>
+</head>
+<body>
+    <div>1 边框收缩</div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <div>2 文字环绕</div>
+    <div class="box1">
+        <img src="images/sur.png" alt="">
+        <p>环绕环绕环绕环绕环绕环绕环绕环绕环绕环绕环绕环绕环绕环绕环绕环绕环绕环绕环绕环绕环绕</p>
+    </div>
+    <div>3 行内块元素的巧妙运用</div>
+    <div class="box2">
+        <a href="#">&lt;&lt;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">...</a>
+        <a href="#">15</a>
+        <a href="#">16</a>
+        <a href="#">17</a>
+        <a href="#">&gt;&gt;</a>
+    </div>
+    <div>4 三角形</div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+
+    <div class="box5">
+        <span class="s1">
+            1000.0¥
+        </span>
+        <div class="triangle"></div>
+        <span class="s2">
+            500.0¥
+        </span>
+    </div>
+</body>
+</html>

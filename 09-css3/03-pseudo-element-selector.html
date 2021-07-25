@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+
+        .box1::before {
+            /* content是必须的 */
+            content: '我';
+        }
+        .box1::after {
+            /* content是必须的 */
+            content: '小猪佩奇';
+        }
+        .box2 {
+            width: 444px;
+            height: 320px;
+            position: relative;
+            margin: 0 auto;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        .box2::after {
+            width: 100%;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            content: '';
+            /* background-color: pink; */
+            background: rgba(0, 0, 0, 0.3) url(images/arr.png) no-repeat center;
+            /* margin: 0px; */
+            position: absolute;
+            display: none;
+        }
+        .box2:hover::after {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">是</div>
+    <div class="box2">
+        <img src="images/tudou.jpg" alt="">
+        <!-- <div class="mask"></div> -->
+    </div>
+</body>
+</html>

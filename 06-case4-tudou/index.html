@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>土豆视频----学习隐藏</title>
+    <style>
+        .box {
+            width: 444px;
+            height: 320px;
+            position: relative;
+            margin: 0 auto;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        .mask {
+            width: 100%;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            /* background-color: pink; */
+            background: rgba(0, 0, 0, 0.3) url(images/arr.png) no-repeat center;
+            /* margin: 0px; */
+            position: absolute;
+            display: none;
+        }
+        .box:hover .mask {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="images/tudou.jpg" alt="">
+        <div class="mask"></div>
+    </div>
+</body>
+</html>

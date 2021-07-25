@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D转换</title>
+    <style>
+        * {
+            background-color: #111;
+        }
+        .box1 img {
+            width: 200px;
+            height: 200px;  
+            float: left;
+        }
+        .box1 {
+            margin: 100px auto;
+            width: 800px;
+            height: 200px;  
+            perspective: 500px;
+        }
+        img {
+            transition: all .5s ease 0.2s;
+        }
+        img:hover {
+            transform: rotateX(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <img src="images/totoro.jfif" alt="">
+        <img src="images/totoro.jfif" alt="">
+        <img src="images/totoro.jfif" alt="">
+        <img src="images/totoro.jfif" alt="">
+    </div>
+</body>
+</html>

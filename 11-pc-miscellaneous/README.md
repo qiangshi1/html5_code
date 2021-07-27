@@ -1,4 +1,4 @@
-# 杂项----老师在p353-p389之间讲的内容
+# PC端杂项----老师在p353-p389之间讲的内容
 
 ## 2D转换
 1. translate 三种写法: `transform: translate(100px, 200px);`/`transform: translateX(100px);`/`transform: translateY(100px);`(01-translate.html)
@@ -68,7 +68,7 @@
     - 一种写法: `-moz-border-radius: 10px`
     - 先写浏览器私有属性, 再写通用属性
 
-## 以上时PC端
+## 以上是PC端
 
 
 

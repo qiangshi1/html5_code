@@ -1,4 +1,16 @@
 /* 通用 */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+input {
+    -webkit-appearance: none;
+}
+img,
+a {
+    -webkit-touch-callout: none;
+}
+
+
 body {
     margin: 0 auto;
     width: 100%;
@@ -9,7 +21,8 @@ body {
     font-family: -apple-system, Helvetica, sans-serif;
     line-height: 1.5;
     color: #666;
-    height: 2000px;
+    /* height: 2000px; */
+    
 }
 
 ul {
@@ -48,7 +61,7 @@ a {
 
 .app ul li:nth-child(1) img {
     width: 10px;
-    
+    vertical-align: middle;
 }
 .app ul li:nth-child(2) {
     width: 10%;
@@ -77,7 +90,7 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: pink;
+    /* background-color: pink; */
     width: 40px;
     height: 44px;
 }
@@ -94,7 +107,7 @@ a {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: green;
+    /* background-color: green; */
     width: 40px;
     height: 44px;
     line-height: 44px;
@@ -104,7 +117,7 @@ a {
 .search-wrap .search {
     position: relative;
     height: 30px;
-    background-color: blue;
+    background-color: white;
     margin: 0 50px;
     border-radius: 15px;
     margin-top: 7px;
@@ -178,7 +191,34 @@ nav a span {
     display: block;
 }
 
+.news img {
+    width: 100%;
+}
+.news a {
+    float: left;
+    height: 100px;
+    /* border-left: 1; */
+    box-sizing: border-box;
+}
+.news a:nth-child(1){
+    width: 50%;
+    background-color: red;
+    /* height: 30px; */
+}
 
+.news a:nth-child(2){
+    width: 25%;
+    background-color: green;
+    border-left: 1px solid #ccc;
+    /* height: 30px; */
+}
+
+.news a:nth-child(3){
+    width: 25%;
+    background-color: blue;
+    border-left: 1px solid #ccc;
+    /* height: 30px; */
+}
 
 
 

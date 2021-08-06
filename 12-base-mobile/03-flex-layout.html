@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局</title>
+    <style>
+        .box1 {
+            display: flex;
+            width: 80%;
+            height: 300px;
+            background-color: antiquewhite;
+            justify-content: space-around;
+        }
+        .box1 span {
+            width: 150px;
+            height: 100px;
+            background-color: purple;
+            margin-right: 5px;
+            flex: 1;
+        }
+        .box2 {
+            display: flex;
+            width: 80%;
+            height: 300px;
+            background-color: burlywood;
+            /* 默认横向排列 */
+            /* flex-direction: row; */
+            /* 纵向排列 */
+            flex-direction: column;
+        }
+        .box2 span {
+            width: 150px;
+            height: 100px;
+            background-color: purple;
+            margin-right: 5px;
+        }
+        .box3 {
+            display: flex;
+            width: 80%;
+            height: 300px;
+            background-color: cadetblue;
+            /* flex-direction: column; */
+            justify-content: space-between;
+        }
+        .box3 span {
+            width: 150px;
+            height: 100px;
+            background-color: purple;
+        }
+
+        .box4 {
+            display: flex;
+            width: 80%;
+            height: 300px;
+            background-color: khaki;
+            flex-wrap: wrap;
+        }
+        .box4 span {
+            width: 150px;
+            height: 100px;
+            background-color: purple;
+        }
+        .box5 {
+            display: flex;
+            width: 80%;
+            height: 300px;
+            background-color: mediumspringgreen;
+            justify-content: center;
+            align-items: center;
+        }
+        .box5 span {
+            width: 150px;
+            height: 100px;
+            background-color: purple;
+        }
+        .box6 {
+            display: flex;
+            width: 80%;
+            height: 300px;
+            background-color: greenyellow;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+        }
+        .box6 span {
+            width: 150px;
+            height: 100px;
+            background-color: purple;
+        }
+        .box7 {
+            display: flex;
+            width: 80%;
+            height: 300px;
+            background-color: firebrick;
+        }
+        .box7 span:nth-child(1) {
+            width: 150px;
+            height: 100px;
+            background-color: red;
+        }
+        .box7 span:nth-child(2) {
+            /* width: 150px; */
+            flex: 1;
+            height: 100px;
+            background-color: green;
+        }
+        .box7 span:nth-child(3) {
+            width: 150px;
+            height: 100px;
+            background-color: blue;
+        }
+        .box8 {
+            display: flex;
+            width: 80%;
+            height: 300px;
+            background-color: midnightblue;
+        }
+        .box8 span:nth-child(1) {
+            /* width: 150px; */
+            flex: 1;
+            height: 100px;
+            background-color: red;
+        }
+        .box8 span:nth-child(2) {
+            /* width: 150px; */
+            flex: 4;
+            height: 100px;
+            background-color: green;
+        }
+        .box8 span:nth-child(3) {
+            /* width: 150px; */
+            flex: 1;
+            height: 100px;
+            background-color: blue;
+        }
+        
+        .box9 {
+            display: flex;
+            width: 80%;
+            height: 300px;
+            background-color: gold;
+        }
+        .box9 span {
+            width: 150px;
+            height: 100px;
+            background-color: purple;
+        }
+        .box9 span:nth-child(3) {
+            align-self: flex-end;
+        }
+        .box10 {
+            display: flex;
+            width: 80%;
+            height: 300px;
+            background-color: navy;
+        }
+        .box10 span {
+            width: 150px;
+            height: 100px;
+            background-color: purple;
+        }
+        .box10 span:nth-child(3) {
+            order: -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- 初识flex -->
+    <div class="box1">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+    <!-- flex-direciton设置纵向排列 -->
+    <div class="box2">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+    <!-- juesity-content设置主轴排列方式 -->
+    <div class="box3">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+    </div>
+    <!-- flex-wrap设置换行与否 -->
+    <div class="box4">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+    </div>
+    <!-- align-items侧轴上的排列方式, 单行 -->
+    <div class="box5">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+    </div>
+    <!-- align-content侧轴上的排列方式, 多行 -->
+    <div class="box6">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+    </div>
+    <!-- flex分配剩余空间 -->
+    <div class="box7">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+    <!-- flex分配剩余空间 -->
+    <div class="box8">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+    <!-- align-self子盒子侧轴排列方式 -->
+    <div class="box9">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+    <!-- order设置子盒子的顺序 -->
+    <div class="box10">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+</body>
+</html>

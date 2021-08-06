@@ -1,0 +1,23 @@
+@basecolor: deeppink;
+@basefont: 14px;
+body {
+    font-size: @basefont;
+    background-color: @basecolor;
+    // 嵌套
+    .header {
+        color: red;
+    }
+    // 伪类
+    &:hover {
+        color: blue;
+    }
+    // less伪元素
+    &::before {
+        content: "before";
+    }
+}
+@baseborder: 5px - 2;
+.nav {
+    width: 60px / 2;
+    border: (@baseborder + 3) solid red;
+}

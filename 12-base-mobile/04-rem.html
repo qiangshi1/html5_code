@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rem单位和媒体查询</title>
+    <style>
+        /* 屏幕上, 并且最大宽度800px */
+        @media screen and (max-width: 800px) {
+            .box3 {
+                background-color: pink;
+            }
+        }
+        /* 后边覆盖前边的 */
+        @media screen and (max-width: 500px) {
+            .box3 {
+                background-color: cornflowerblue;
+            }
+        }
+        @media screen and (max-width: 539px) {
+            body {
+                background-color: blue;
+            }
+        }
+        @media screen and (min-width: 540px) and (max-width: 969px) {
+            body {
+                background-color: green;
+            }
+        }
+        
+        @media screen and (min-width: 970px) {
+            body {
+                background-color: red;
+            }
+        }
+        html {
+            font-size: 14px;
+        }
+        .box1 {
+            font-size: 12px;
+        }
+        .box1 p {
+            /* em是相对于父元素的字体大小来说的, 所以是120px */
+            width: 10em;
+            height: 10em;
+            background-color: pink;
+        }
+        .box2 p {
+            /* rem是相对于root元素(html)的字体大小来说的, 所以是140px */
+            width: 10rem;
+            height: 10rem;
+            background-color: cyan;
+        }
+        @media screen and (min-width:700px) {
+            html {
+                font-size: 10px;
+            }
+        }
+        @media screen and (min-width:800px) {
+            html {
+                font-size: 20px;
+            }
+        }
+        .top {
+            height: 1rem;
+            font-style: 0.5rem;
+            background-color: green;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- rem单位 -->
+    <div class="box1">
+        <p>123</p>
+    </div>
+    
+    <div class="box2">
+        <p>456</p>
+    </div>
+    <!-- 媒体查询语法 -->
+    <div class="box3">
+        我可以根据屏幕宽度改变颜色
+    </div>
+    <div class="top">
+        我是top
+    </div>
+</body>
+</html>

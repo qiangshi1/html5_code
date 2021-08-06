@@ -1,4 +1,4 @@
-# 京东移动端案例
+# 京东移动端案例----应用流式布局
 1. normalize.css
     - 地址: https://github.com/necolas/normalize.css
     - 它的星星还挺多
@@ -27,6 +27,20 @@
     - 我就用png了
 
 9. 京东快报, 等学了js后再做
+
+10. 移动端特殊样式: 
+    ```css
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+    input {
+        -webkit-appearance: none;
+    }
+    img,
+    a {
+        -webkit-touch-callout: none;
+    }
+    ```
 
 
 

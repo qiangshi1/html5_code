@@ -1,0 +1,17 @@
+body {
+  font-size: 14px;
+  background-color: deeppink;
+}
+body .header {
+  color: red;
+}
+body:hover {
+  color: blue;
+}
+body::before {
+  content: "before";
+}
+.nav {
+  width: 60px / 2;
+  border: 6px solid red;
+}

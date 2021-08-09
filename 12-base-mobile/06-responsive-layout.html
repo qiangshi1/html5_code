@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式布局基本原理</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .container  {
+            height: 150px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+        .container ul li {
+            float: left;
+            width: 12.5%;
+            background-color: rgb(4, 78, 4);
+        }
+        /* 1. 超小屏幕, 小于768px 布局容器宽度为100% */
+        @media screen and (max-width: 767px) {
+            .container {
+                width: 100%;
+            }
+            .container ul li {
+                width: 33.3%;
+            }
+        }
+        /* 2. 小屏幕, 大于等于768px 布局容器宽度为750px */
+        @media screen and (min-width: 768px) {
+            .container {
+                width: 750px;
+            }
+            /* .container ul li {
+                width: 33.3%;
+            } */
+        }
+        /* 3. 中等屏幕, 大于等于992px 布局容器宽度为970px */
+        @media screen and (min-width: 992px) {
+            .container {
+                width: 970px;
+            }
+            /* .container ul li {
+                width: 33.3%;
+            } */
+        }
+        /* 4. 大屏幕, 大于等于1200px 布局容器宽度为970px */
+        @media screen and (min-width: 1200px) {
+            .container {
+                width: 1170px;
+            }
+            /* .container ul li {
+                width: 33.3%;
+            } */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+            <li>导航栏</li>
+        </ul>
+    </div>
+
+</body>
+</html>

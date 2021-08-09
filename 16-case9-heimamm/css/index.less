@@ -1,0 +1,223 @@
+a {
+  text-decoration: none;
+  color: #707070;
+}
+h4 {
+  margin: 0;
+}
+body {
+    min-width: 320px;
+    max-width: 750px;
+    /* width: 10rem; */
+    // height: 2000px;
+    margin: 0 auto;
+    // line-height: 1.5;
+    // font-family: Arial, Helvetica, STHeiTi, sans-serif;
+    background-color: #f2f4f7;
+}
+
+/* 如果屏幕超过了750px, 还是使用媒体查询? */
+@media screen and (min-width: 750px){
+    html {
+      font-size: 37.5px!important;
+    }   
+}
+
+.wrap{
+  background-color: #fff;
+  padding-bottom: 1.146667rem;
+}
+
+.header {
+  height: 2.133333rem;
+  border-bottom: 1px solid #eaeaea;
+  text-align: center;
+  line-height: 2.133333rem;
+  font-size: 0.933333rem;
+  color: #1c1c1c;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.2rem 0 1.5rem 0;
+  .item {
+    display: flex;
+    width: 33.33%;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 3.706667rem;
+      height: 3.706667rem;
+    }
+    span {
+      font-size: .666667rem;
+      // color: #707070;
+    }
+  }
+  // 选择前边三个
+  .item:nth-child(-n+3) {
+    margin-bottom: 1.653333rem;
+  }
+}
+// go模块
+.go{
+  img {
+    width: 100%;
+  }
+  margin: 0 .266667rem 0 .48rem;
+}
+
+// 就业指导模块
+.content {
+  padding: 1.066667rem .586667rem;
+  background-color: #fff;
+  margin-top: .266667rem;
+  .con-hd {
+    height: 1.013333rem;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.013333rem;
+    margin-bottom: 0.906667rem;
+    h4 {
+      font-size: 0.746667rem;
+      color: #333333;
+      .icon {
+        display: inline-block;
+        width: 1.013333rem;
+        height: 1.013333rem;
+        // 添加这个代码，可以让后面的文字垂直居中
+        vertical-align: middle;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .more {
+      font-size: 0.586667rem;
+      color: #999999;
+    }
+  }
+  .get_job_focus {
+    position: relative;
+    .swiper-container {
+      // width: 100%;
+      height: 100%;
+      // 根据需求把宽度定位 540px
+      width: 14.4rem;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      // 图片和文字竖向显示
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+	  transition: 300ms;
+	  transform: scale(0.8);
+    // 透明度
+    opacity: 0.4;
+    a {
+      width: 9.013333rem;
+      height: 10.026667rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    p {
+      width: 9.013333rem;
+      font-size: 0.666667rem;
+      margin-top: 0.64rem;
+      color: #333;
+    }
+    }
+  // 当前选中的slide, 也就是中间的那个
+	.swiper-slide-active,.swiper-slide-duplicate-active{
+    transform: scale(1);
+    z-index: 999;
+    opacity: 1;
+	}
+  .swiper-button-next,
+    .swiper-button-prev {
+      outline: none;
+      &:after {
+        font-size: 1.066667rem;
+        color: #333;
+      }
+    }
+  }
+}
+// 充电学习
+.study_con{
+  padding-bottom: 3.733333rem;
+}
+.study{
+  .study_fo{
+    padding-top: .266667rem;
+  }
+  .swiper-slide {
+    font-size: 18px;
+    background: #fff;
+    width: 7.733333rem;
+    height: 9.066667rem;
+    border-radius: .266667rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    img {
+      width: 100%;
+      // height: 5.066667rem;
+    }
+    h5{
+      font-size: .693333rem;
+      margin: .533333rem 0;
+      font-weight: 400;
+      padding: 0 .266667rem;
+    }
+    p{
+      font-size: .693333rem;
+      color: #ff4400;
+      padding: 0 .266667rem;
+    }
+  }
+}
+
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 2.933333rem;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  padding: .533333rem 0 0 0;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  .item{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+      width: 1.04rem;
+      height: 1.093333rem;
+    }
+    p{
+      font-size: .586667rem;
+      color: #666;
+      margin-top: .266667rem;
+    }
+  }
+}

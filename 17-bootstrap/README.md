@@ -30,7 +30,10 @@
             <div class="col-md-8 col-md-pull-4">right</div>
         </div>
     ```
-7.     
+7.  元素的显示与隐藏
+    - 根据屏幕宽度隐藏: `hidden`
+    - 根据屏幕宽度显示: `visible`
+
 
 
 

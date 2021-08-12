@@ -3,6 +3,7 @@
 ## 下载B站自提图标----就是那个logo
 1. 按老师p536展示的下一个文件iconfont.eot
 2. https://www.cnblogs.com/wwqzbl/p/14904965.html
+3. 未成功
 
 ## easyless vscode的一个插件 less转css
 1. settings中加这句话设置导出路径
